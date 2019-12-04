@@ -17,4 +17,11 @@ describe('myBind', () => {
     }
     assert.isFunction(fn.myBind)
   })
+  it('能正确绑定this', () => {
+    const fn = function() {
+      return this.name
+    }
+    const newFn = fn.bind({ name: 'zch' })
+    assert(newFn() === 'zch')
+  })
 })
