@@ -1,7 +1,7 @@
 const myBind = function(...args) {
   const fn = this
   return function newFn(...newArgs) {
-    fn.call(this, ...args, ...newArgs)
+    return fn.call(...args, ...newArgs)
   }
 }
 

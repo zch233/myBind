@@ -21,7 +21,7 @@ describe('myBind', () => {
     const fn = function() {
       return this.name
     }
-    const newFn = fn.bind({ name: 'zch' })
+    const newFn = fn.myBind({ name: 'zch' })
     assert(newFn() === 'zch')
   })
 })
