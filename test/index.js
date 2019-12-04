@@ -31,4 +31,11 @@ describe('myBind', () => {
     const newFn = fn.myBind({ name: 'zch' }, '2333')
     assert(newFn('ha') === 'zch2333ha')
   })
+  it('支持new操作符', () => {
+    const fn = function() {
+      this.name = 'zch'
+    }
+    const newFn = fn.myBind()
+    assert(new newFn().name === 'zch')
+  })
 })

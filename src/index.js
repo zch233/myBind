@@ -1,8 +1,9 @@
-const myBind = function(...args) {
+const myBind = function(asThis, ...args) {
   const fn = this
-  return function newFn(...newArgs) {
-    return fn.call(...args, ...newArgs)
+  function newFn(...newArgs) {
+    return fn.call(this instanceof newFn ? this : asThis, ...args, ...newArgs)
   }
+  return newFn
 }
 
 Function.prototype.myBind = myBind
