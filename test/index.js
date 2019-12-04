@@ -25,10 +25,10 @@ describe('myBind', () => {
     assert(newFn() === 'zch')
   })
   it('能接收参数', () => {
-    const fn = function(data) {
-      return this.name + data
+    const fn = function(a, b) {
+      return this.name + a + b
     }
     const newFn = fn.myBind({ name: 'zch' }, '2333')
-    assert(newFn() === 'zch2333')
+    assert(newFn('ha') === 'zch2333ha')
   })
 })
