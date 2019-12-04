@@ -24,7 +24,7 @@ describe('myBind', () => {
     const newFn = fn.myBind({ name: 'zch' })
     assert(newFn() === 'zch')
   })
-  it('能接收参数', () => {
+  it('能接收参数并分次接收', () => {
     const fn = function(a, b) {
       return this.name + a + b
     }
