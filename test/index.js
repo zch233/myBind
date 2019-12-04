@@ -24,4 +24,11 @@ describe('myBind', () => {
     const newFn = fn.myBind({ name: 'zch' })
     assert(newFn() === 'zch')
   })
+  it('能接收参数', () => {
+    const fn = function(data) {
+      return this.name + data
+    }
+    const newFn = fn.myBind({ name: 'zch' }, '2333')
+    assert(newFn() === 'zch2333')
+  })
 })
