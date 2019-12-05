@@ -1,8 +1,8 @@
 {
-  "name": "my-deep-clone",
+  "name": "my-bind",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:zch233/myDeepClone.git",
+  "repository": "git@github.com:zch233/myBind.git",
   "author": "zhangchao <529743595@qq.com>",
   "license": "MIT",
   "scripts": {
